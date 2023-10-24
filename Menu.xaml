@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Menu"
+             BackgroundImageSource="fondo.jpg"
              Title="Menu">
-    <VerticalStackLayout>
-        <Label 
-            Text="Menu"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout Margin="40" Spacing="20">
+        <Button
+            Text="Ver lista de comida"
+            BackgroundColor="#eacb86"
+            TextColor="Black"
+            />
+
+        <Button
+            Text="Acerca de"
+            BackgroundColor="#eacb86"
+            TextColor="Black"
+            />
+        
+
+        <Button
+            Text="Comentarios"
+            BackgroundColor="#eacb86"
+            TextColor="Black"
+            />
+
+        <Button
+            Text="Contacto"
+            BackgroundColor="#eacb86"
+            />
+
     </VerticalStackLayout>
 </ContentPage>
