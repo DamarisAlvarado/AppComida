@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\fondo.jpg" />
+	  <None Remove="Resources\Images\windows.png" />
 	</ItemGroup>
 
 	<ItemGroup>

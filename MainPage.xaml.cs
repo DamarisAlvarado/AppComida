@@ -22,7 +22,8 @@
 
 
             // No mover es para ir directo al menu amel :) ;
-            await Navigation.PushAsync(new Menu());
+            // AMEL a DAMARIS: Aquí agregue el viewmodel de tu ventana Menu
+            await Navigation.PushAsync(new Menu(new ViewModels.MenuViewModel()));
         }
     }
 }
