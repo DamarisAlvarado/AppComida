@@ -3,30 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Menu"
              BackgroundImageSource="fondo.jpg"
-             Title="Menu">
-    <VerticalStackLayout Margin="40" Spacing="20">
+             Title="Menú">
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5" Margin="40" Spacing="20">
         <Button
+            WidthRequest="450"
+            Margin="10"
             Text="Ver lista de comida"
-            BackgroundColor="#eacb86"
+            BackgroundColor= "{StaticResource cpiel}"
             TextColor="Black"
+            FontSize="Medium"
+            BorderWidth="2"
+            BorderColor="Bisque"
             />
 
         <Button
+            WidthRequest="450"
+            Margin="10"
             Text="Acerca de"
-            BackgroundColor="#eacb86"
+            BackgroundColor="{StaticResource cpiel}"
             TextColor="Black"
+            BorderWidth="2"
+            BorderColor="Bisque"
+            FontSize="Medium"
             />
         
 
         <Button
+            WidthRequest="450"
+            Margin="10"
             Text="Comentarios"
-            BackgroundColor="#eacb86"
+            BackgroundColor="{StaticResource cpiel}"
             TextColor="Black"
+            FontSize="Medium"
+            BorderWidth="2"
+            BorderColor="Bisque"
             />
 
         <Button
+            WidthRequest="450" 
+            Margin="10"
             Text="Contacto"
-            BackgroundColor="#eacb86"
+            BackgroundColor="{StaticResource cpiel}"
+            TextColor="Black"
+            FontSize="Medium"
+            BorderWidth="2"
+            BorderColor="Bisque"
             />
 
     </VerticalStackLayout>
