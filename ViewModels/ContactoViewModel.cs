@@ -17,7 +17,7 @@ namespace AppComida.ViewModels
         public Command SendEmail { get; }
 
         // AMEL: Interfaz para abrir servicio de Email
-        IEmail email;
+        readonly IEmail email;
 
         // AMEL: Objeto que controla los cambios de las propiedades del viewmodel
         public event PropertyChangedEventHandler PropertyChanged;
@@ -63,27 +63,34 @@ namespace AppComida.ViewModels
         // AMEL: Metodo para abrir la aplicacion de correos por defecto y enviar el email.
         public async void SendEmailAsync(object obj)
         {
-            switch (obj.GetType().Name.ToString())
+            if (email.IsComposeSupported)
             {
-                case "Damaris":
-                    await email.ComposeAsync("Subject", "Body", _damaris.correo.ToString());
-                    break;
+                switch (obj.GetType().Name.ToString())
+                {
+                    case "Damaris":
+                        await email.ComposeAsync("Subject", "Body", _damaris.correo.ToString());
+                        break;
 
-                case "Samantha":
-                    await email.ComposeAsync("Subject", "Body", _samantha.correo.ToString());
-                    break;
+                    case "Samantha":
+                        await email.ComposeAsync("Subject", "Body", _samantha.correo.ToString());
+                        break;
 
-                case "Amel":
-                    await email.ComposeAsync("Subject", "Body", _amel.correo.ToString());
-                    break;
+                    case "Amel":
+                        await email.ComposeAsync("Subject", "Body", _amel.correo.ToString());
+                        break;
+                }
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Tu dispositivo no permite enviar emails", "OK");
             }
         }
 
         // AMEL: Metodo que abre el XAML para escribir el mesanje que queremos enviar
-        public async void OpenEmailComposer(object obj)
-        {
+        //public async void OpenEmailComposer(object obj)
+        //{
 
-        }
+        //}
 
         // AMEL: Funcion que se llama cuando se cambia una propiedad
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")

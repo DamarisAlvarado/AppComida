@@ -28,6 +28,7 @@
         <Button
             Text="Contacto"
             BackgroundColor="#eacb86"
+            Command="{Binding AbrirContacto}"
             />
 
     </VerticalStackLayout>
