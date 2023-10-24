@@ -5,9 +5,49 @@
              Title="Contacto">
     
     <!-- AMEL: Informacion de nosotros, añadir un boton para abrir una ventana de redaccion de correos -->
+
+    <!-- #region AMEL: Contenido de la página -->
+
+    <!-- 
+        AMEL:
+        [ScrollView] 
+            (Descripcion) => Permite al usuario hacer scroll si hay demasiados elementos en la pantalla
     
-    <!--#region-->
-    
-    <!--#endregion-->
+        [VerticalStackLayout]
+            (Descripcion) => Acomodará los elementos en bloque verticalmente
+            (Spacing) => Espacio entre los elementos dentro de él
+        
+    -->
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10">
+
+            <!--#region AMEL: Información de DAMARIS-->
+            <Frame
+                CornerRadius="12"
+                HasShadow="True">
+                <Label Text="Damaris"/>
+            </Frame>
+            <!--#endregion-->
+
+            <!--#region AMEL: Información de SAMANTHA-->
+            <Frame
+                CornerRadius="12"
+                HasShadow="True">
+                <Label Text="Damaris"/>
+            </Frame>
+            <!--#endregion-->
+
+            <!--#region AMEL: Información de AMEL-->
+            <Frame
+                CornerRadius="12"
+                HasShadow="True">
+                <Label Text="Damaris"/>
+            </Frame>
+            <!--#endregion-->
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <!-- #endregion -->
     
 </ContentPage>
