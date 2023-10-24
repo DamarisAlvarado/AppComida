@@ -3,13 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Contacto"
              xmlns:local="clr-namespace:AppComida.ViewModels"
+             x:DataType="local:ContactoViewModel"
              Title="Contacto">
-
-    <!-- Añadimos recursos estaticos a nuestra pagina -->
-    <ContentPage.Resources>
-        <!-- Definimos nuestro viewmodel como ViewModel -->
-        <local:ContactoViewModel x:Key="ViewModel" />
-    </ContentPage.Resources>
 
     <!-- AMEL: Informacion de nosotros, añadir un boton para abrir una ventana de redaccion de correos -->
 
@@ -32,7 +27,7 @@
                 <StackLayout>
                     <!-- Nombre -->
                     <Label 
-                        Text="Damaris Alvarado"
+                        Text="{Binding Damaris.nombre}"
                         FontAttributes="Bold"
                         FontSize="16" />
                     
@@ -44,18 +39,18 @@
                         
                     <!-- Numero de control -->
                     <Label
-                        Text="Numero de control: 19480"
+                        Text="{Binding Damaris.matricula, StringFormat='Matricula: {0}'}"
                         HorizontalOptions="Fill" />
 
                     <!-- E-mail -->
                     <Label 
-                        Text="Correo: damaris@gmail.com"
+                        Text="{Binding Damaris.correo, StringFormat='Correo: {0}'}"
                         HorizontalOptions="Fill"
                         Margin="0, 2" />
 
                     <!-- Telefono -->
                     <Label 
-                        Text="Telefono: 000-123-5678" 
+                        Text="{Binding Damaris.telefono, StringFormat='Telefono: {0}'}" 
                         HorizontalOptions="Fill"
                         Margin="0, 2" />
 
@@ -63,7 +58,9 @@
                     <Button 
                         Text="Contactar"
                         HorizontalOptions="End"
-                        Margin="0, 2" />
+                        Margin="0, 2"
+                        Command="{Binding SendEmail}"
+                        CommandParameter="{Binding Damaris}"/>
                 </StackLayout>
             </Frame>
             <!--#endregion-->
