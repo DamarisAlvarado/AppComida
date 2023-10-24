@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+    <? COLORES AGREGADOS PARA REFERENCIA ?>
     <Color x:Key="rojo">#8a0001</Color>
     <Color x:Key="naranja">#d76001</Color>
     <Color x:Key="piel">#eacb86</Color>
