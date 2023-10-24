@@ -11,20 +11,18 @@ namespace AppComida.ViewModels
 {
     public class ContactoViewModel : INotifyPropertyChanged
     {
+        #region AMEL: DEFINICION DE PROPIEDADES
+
+        // AMEL: Comando para enviar email
+        public Command SendEmail { get; }
+
+        // AMEL: Interfaz para abrir servicio de Email
         IEmail email;
 
         // AMEL: Objeto que controla los cambios de las propiedades del viewmodel
         public event PropertyChangedEventHandler PropertyChanged;
 
-        // AMEL: Funcion que se llama cuando se cambia una propiedad
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        // AMEL: Comando para enviar email
-        public Command SendEmail { get; }
-
+        // AMEL: Propiedad que almacena los datos de nosotros
         private Damaris _damaris;
         public Damaris Damaris
         {
@@ -58,6 +56,11 @@ namespace AppComida.ViewModels
             }
         }
 
+        #endregion
+
+        #region AMEL: DEFINICION DE METODOS
+
+        // AMEL: Metodo para abrir la aplicacion de correos por defecto y enviar el email.
         public async void SendEmailAsync(object obj)
         {
             switch (obj.GetType().Name.ToString())
@@ -76,10 +79,32 @@ namespace AppComida.ViewModels
             }
         }
 
+        // AMEL: Metodo que abre el XAML para escribir el mesanje que queremos enviar
+        public async void OpenEmailComposer(object obj)
+        {
+
+        }
+
+        // AMEL: Funcion que se llama cuando se cambia una propiedad
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            // AMEL: Si propertyName cambia se invocará PropertyChanged
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+
+        #region AMEL: CONSTRUCTOR ContactoViewModel
+
         public ContactoViewModel(IEmail email)
         {
+            // Aquí se inicia el servicio de Email
             this.email = email;
+
+            // Inicio de comandos
             SendEmail = new Command(SendEmailAsync);
+
+            // Incializacion de propiedades
             Damaris = new Damaris() 
             { 
                 nombre="Damaris Alvarado",
@@ -102,5 +127,7 @@ namespace AppComida.ViewModels
                 telefono = "1234567890"
             };
         }
+
+        #endregion
     }
 }
