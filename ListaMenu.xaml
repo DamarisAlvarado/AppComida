@@ -4,6 +4,8 @@
              x:Class="AppComida.ListaMenu"
              Title="ListaMenu">
     <VerticalStackLayout>
+        
+       
        
     </VerticalStackLayout>
 </ContentPage>
