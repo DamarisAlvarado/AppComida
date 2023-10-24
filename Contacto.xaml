@@ -10,7 +10,7 @@
         <!-- Definimos nuestro viewmodel como ViewModel -->
         <local:ContactoViewModel x:Key="ViewModel" />
     </ContentPage.Resources>
-    
+
     <!-- AMEL: Informacion de nosotros, añadir un boton para abrir una ventana de redaccion de correos -->
 
     <!-- #region AMEL: Contenido de la página -->
