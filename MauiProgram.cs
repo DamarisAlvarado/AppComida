@@ -15,6 +15,9 @@ namespace AppComida
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // AMEL a TODOS: Servicio para abrir la aplicacion de e-mail por defaul del dispositivo
+            builder.Services.AddSingleton<IEmail>();
+
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
