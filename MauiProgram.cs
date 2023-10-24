@@ -16,7 +16,7 @@ namespace AppComida
                 });
 
             // AMEL a TODOS: Servicio para abrir la aplicacion de e-mail por defaul del dispositivo
-            // builder.Services.AddTransient<IEmail>();
+            builder.Services.AddSingleton<IEmail>(Email.Default);
 
 #if DEBUG
 		builder.Logging.AddDebug();
