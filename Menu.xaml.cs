@@ -1,29 +1,19 @@
+using AppComida.ViewModels;
+
 namespace AppComida;
 
 public partial class Menu : ContentPage
 {
-	public Menu()
+	// AMEL a DAMARIA: Aquí se le pasa como contexto el viewmodel menu para que muestre la imagen de fondo
+	public Menu(MenuViewModel vm)
 	{
 		InitializeComponent();
+
+		BindingContext = vm;
 	}
     private async void lista_comida(object sender, EventArgs e)
 	{
         await Navigation.PushAsync(new ListaMenu());
     }
 
-    //NO MODIFICAR SE CAMBIARA CUANDO ESTEN LISTOS LOS PAGES
-    private async void Acerca_de(object sender, EventArgs e)
-    {
-        //await Navigation.PushAsync(new ListaMenu());
-    }
-
-    private async void Comentarios(object sender, EventArgs e)
-    {
-        //await Navigation.PushAsync(new ListaMenu());
-    }
-
-    private async void Contacto(object sender, EventArgs e)
-    {
-        //await Navigation.PushAsync(new ListaMenu());
-    }
 }
