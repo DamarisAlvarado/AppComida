@@ -23,3 +23,7 @@ Escriban los colores aquí para solo copiar y pegar
 - Amarillo: `#FFFF00`
 
 ***@Damaris: Si no son cambialos, por fa***
+
+# Links
+*Aquí van links y otras cosas del proyecto*
+- Damaris: [Splash](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/images/splashscreen?tabs=android)
