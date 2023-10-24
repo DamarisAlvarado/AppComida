@@ -6,6 +6,7 @@
 - Damaris
 	- [ ] Splash
 	- [ ] Menu
+	- [ ] lista
 - Samantha
 	- [ ] Comentarios
 	- [ ] Acerca de
@@ -21,7 +22,7 @@ Escriban los colores aquí para solo copiar y pegar
 - Naranja:  `#FFA500`
 - Blanco:   `#FFFFFF`
 - Amarillo: `#FFFF00`
-
+estan en la parte de colores.xaml ya con variables
 ***@Damaris: Si no son cambialos, por fa***
 
 # Links
