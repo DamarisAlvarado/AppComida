@@ -8,11 +8,8 @@ namespace AppComida.ViewModels
         // AMEL a DAMARIS: Esta variable almacena el nombre de la imagen que mostrará en el menu.
         public string BackgroundImage { get; set; }
 
-        // AMEL a DAMARIS: Esta propiedad nos permite utilizar la navegacion de la ventana donde estamos actualmente
-        readonly INavigation _navigation;
-
         // AMEL a DAMARIS: Este constructor se inicia cuando se inicia la ventana
-        public MenuViewModel(INavigation navigation)
+        public MenuViewModel()
         {
             // AMEL: Primero comprueba si el dispositivo es Android o iOS
             if (DeviceInfo.Platform == DevicePlatform.Android || DeviceInfo.Platform == DevicePlatform.iOS)
@@ -25,9 +22,6 @@ namespace AppComida.ViewModels
                 // Si no lo es... cargará "windows.png"
                 BackgroundImage = "windows.png";
             }
-
-            // Iniciamos las propiedades abstractas
-            this._navigation = navigation;
 
             // Convertimos nuestros metodos en commandos para utilizar en el view
             this.AbrirContacto = new Command(Abrircontacto);
@@ -48,7 +42,7 @@ namespace AppComida.ViewModels
         // AMELa DAMARIS: Este metodo es lo que ejecutará mi comando AbrirContacto
         public async void Abrircontacto(object obj)
         {
-            await _navigation.PushAsync(new Contacto(new ContactoViewModel(Email.Default, _navigation)));
+            await App.Current.MainPage.Navigation.PushAsync(new Contacto(new ContactoViewModel()));
         }
     }
 }

@@ -16,10 +16,6 @@ namespace AppComida.ViewModels
         // AMEL: Comando para enviar email
         public Command OpenEmail { get; }
 
-        // AMEL: Interfaces
-        readonly IEmail email;
-        readonly INavigation navigation;
-
         // AMEL: Objeto que controla los cambios de las propiedades del viewmodel
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -64,7 +60,7 @@ namespace AppComida.ViewModels
         public async void OpenEmailComposer(object obj)
         {
             var dynamicObj = obj as dynamic;
-            if (email.IsComposeSupported) await navigation.PushAsync(new Componer(dynamicObj.correo, Email.Default));
+            if (Email.Default.IsComposeSupported) await App.Current.MainPage.Navigation.PushAsync(new Componer(dynamicObj.correo));
             else await App.Current.MainPage.DisplayAlert("Error", "Tu dispositivo no tiene una aplicación por default para envios de emails", "Entendido");
         }
 
@@ -79,11 +75,8 @@ namespace AppComida.ViewModels
 
         #region AMEL: CONSTRUCTOR ContactoViewModel
 
-        public ContactoViewModel(IEmail email, INavigation navigation)
+        public ContactoViewModel()
         {
-            // Aquí se inicia el servicio de Email
-            this.email = email;
-            this.navigation = navigation;
 
             // Creación de comandos
             OpenEmail = new Command(OpenEmailComposer);
