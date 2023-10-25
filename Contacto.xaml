@@ -19,7 +19,7 @@
                 FontSize="18"
                 Margin="25, 5"/>
 
-            <!--#region AMEL: Información de DAMARIS-->
+            <!--#region AMEL: Información de DAMARIS--> 
             <Frame
                 CornerRadius="12"
                 HasShadow="True"
@@ -61,6 +61,7 @@
                         Margin="0, 2"
                         Command="{Binding OpenEmail}"
                         CommandParameter="{Binding Damaris}"/>
+					
                 </StackLayout>
                 
             </Frame>
@@ -71,6 +72,7 @@
                 CornerRadius="12"
                 HasShadow="True"
                 Margin="50, 0">
+
                 <StackLayout>
                     <!-- Nombre -->
                     <Label 
@@ -108,7 +110,7 @@
                         Margin="0, 2"
                         Command="{Binding OpenEmail}"
                         CommandParameter="{Binding Samantha}"/>
-                </StackLayout>
+                </StackLayout>               
             </Frame>
             <!--#endregion-->
 
