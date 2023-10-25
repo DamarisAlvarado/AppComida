@@ -14,10 +14,11 @@ namespace AppComida.ViewModels
         #region AMEL: DEFINICION DE PROPIEDADES
 
         // AMEL: Comando para enviar email
-        public Command SendEmail { get; }
+        public Command OpenEmail { get; }
 
-        // AMEL: Interfaz para abrir servicio de Email
+        // AMEL: Interfaces
         readonly IEmail email;
+        readonly INavigation navigation;
 
         // AMEL: Objeto que controla los cambios de las propiedades del viewmodel
         public event PropertyChangedEventHandler PropertyChanged;
@@ -59,38 +60,13 @@ namespace AppComida.ViewModels
         #endregion
 
         #region AMEL: DEFINICION DE METODOS
-
-        // AMEL: Metodo para abrir la aplicacion de correos por defecto y enviar el email.
-        public async void SendEmailAsync(object obj)
-        {
-            if (email.IsComposeSupported)
-            {
-                switch (obj.GetType().Name.ToString())
-                {
-                    case "Damaris":
-                        await email.ComposeAsync("Subject", "Body", _damaris.correo.ToString());
-                        break;
-
-                    case "Samantha":
-                        await email.ComposeAsync("Subject", "Body", _samantha.correo.ToString());
-                        break;
-
-                    case "Amel":
-                        await email.ComposeAsync("Subject", "Body", _amel.correo.ToString());
-                        break;
-                }
-            }
-            else
-            {
-                await App.Current.MainPage.DisplayAlert("Error", "Tu dispositivo no permite enviar emails", "OK");
-            }
-        }
-
         // AMEL: Metodo que abre el XAML para escribir el mesanje que queremos enviar
-        //public async void OpenEmailComposer(object obj)
-        //{
-
-        //}
+        public async void OpenEmailComposer(object obj)
+        {
+            var dynamicObj = obj as dynamic;
+            if (email.IsComposeSupported) await navigation.PushAsync(new Componer(dynamicObj.correo, Email.Default));
+            else await App.Current.MainPage.DisplayAlert("Error", "Tu dispositivo no tiene una aplicación por default para envios de emails", "Entendido");
+        }
 
         // AMEL: Funcion que se llama cuando se cambia una propiedad
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -103,36 +79,38 @@ namespace AppComida.ViewModels
 
         #region AMEL: CONSTRUCTOR ContactoViewModel
 
-        public ContactoViewModel(IEmail email)
+        public ContactoViewModel(IEmail email, INavigation navigation)
         {
             // Aquí se inicia el servicio de Email
             this.email = email;
+            this.navigation = navigation;
 
-            // Inicio de comandos
-            SendEmail = new Command(SendEmailAsync);
+            // Creación de comandos
+            OpenEmail = new Command(OpenEmailComposer);
 
-            // Incializacion de propiedades
+            #region AMEL: Objetos que contiene nuestros datos
             Damaris = new Damaris() 
             { 
                 nombre="Damaris Alvarado",
-                matricula="19480123",
-                correo="damaris@gmail.com",
-                telefono="1234567890"
+                matricula= "19480887",
+                correo= "L19480887@nuevoleon.tecnm.mx",
+                telefono="8764328787"
             };
             Samantha = new Samantha() 
             {
                 nombre = "Samantha Flores",
-                matricula = "19480321",
-                correo = "samantha@gmail.com",
-                telefono = "1234567890"
+                matricula = "19480820",
+                correo = "L19480820@nuevoleon.tecnm.mx",
+                telefono = "5430985656"
             };
             Amel = new Amel() 
             {
                 nombre = "Amel Delgado",
                 matricula = "19720124",
-                correo = "amel@gmail.com",
-                telefono = "1234567890"
+                correo = "L19720124@nuevoleon.tecnm.mx",
+                telefono = "0985643222"
             };
+            #endregion
         }
 
         #endregion

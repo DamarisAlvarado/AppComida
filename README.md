@@ -12,7 +12,7 @@
 	- [ ] Acerca de
 - Amel
 	- [ ] Login
-	- [ ] Contacto
+	- [X] Contacto
 	- [ ] Acerca de
 
 # Colores :art:
