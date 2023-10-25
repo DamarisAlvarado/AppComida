@@ -59,6 +59,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Acerca.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Componer.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
