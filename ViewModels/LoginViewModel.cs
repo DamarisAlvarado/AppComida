@@ -33,5 +33,10 @@ namespace AppComida.ViewModels
             }
             await App.Current.MainPage.Navigation.PushAsync(new Menu(new MenuViewModel()));
         }
+
+        //public async void SignInWithEmailProvider(object obj)
+        //{
+            
+        //}
     }
 }

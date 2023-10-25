@@ -33,6 +33,11 @@
                 Command="{Binding AnonymousSignIn}"
                 HorizontalOptions="Center" />
 
+            <!--<Button
+                Text="Crear cuenta"
+                Command="{Binding }"
+                HorizontalOptions="Center" />-->
+
         </VerticalStackLayout>
     </ScrollView>
 
