@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="AppComida.Acerca"
              Title="Acerca">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+        <cv:BarcodeImage BarcodeMargin="5" WidthRequest="400" HeightRequest="400"
+                         BarcodeBackground="White"
+                         BarcodeForeground="Blue" BarcodeFormat="QR_CODE"
+                         Barcode="https://www.facebook.com/"/>
     </VerticalStackLayout>
 </ContentPage>
