@@ -1,18 +1,16 @@
-<<<<<<< HEAD
-=======
+
 using AppComida.ViewModels;
 
->>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
 namespace AppComida;
 
 public partial class Componer : ContentPage
 {
-<<<<<<< HEAD
+
 	public Componer()
 	{
 		InitializeComponent();
 	}
-=======
+
 	public Componer(string _whom)
 	{
 		InitializeComponent();
@@ -37,5 +35,5 @@ public partial class Componer : ContentPage
 
 		await Email.Default.ComposeAsync(subject.Text, body.Text, whom.Text);
     }
->>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
+
 }

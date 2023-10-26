@@ -49,7 +49,7 @@
             WidthRequest="450" 
             Margin="10"
             Text="Contacto"
-<<<<<<< HEAD
+
 
 
             BackgroundColor="{StaticResource cpiel}"
@@ -58,14 +58,7 @@
             BorderWidth="2"
             BorderColor="Bisque"
             Command="{Binding AbrirContacto}"/>
-        
-      
 
-=======
-            BackgroundColor="#eacb86"
-            Command="{Binding AbrirContacto}"
-            />
->>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
 
     </VerticalStackLayout>
 </ContentPage>
