@@ -1,3 +1,4 @@
+using AppComida.Services;
 using AppComida.ViewModels;
 
 namespace AppComida;
@@ -12,7 +13,8 @@ public partial class Menu : ContentPage
 	}
     private async void lista_comida(object sender, EventArgs e)
 	{
-        await Navigation.PushAsync(new ListaMenu());
+        
+          await Navigation.PushAsync(new ListaMenu());
     }
 
 	private async void acerca_de(object sender, EventArgs e)

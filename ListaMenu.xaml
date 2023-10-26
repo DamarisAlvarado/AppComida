@@ -3,9 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.ListaMenu"
              Title="ListaMenu">
-    <VerticalStackLayout>
-        
-       
-       
-    </VerticalStackLayout>
+    
+    <ScrollView>
+        <VerticalStackLayout
+         Spacing="25"
+         Padding="30,30"
+         VerticalOptions="Start">
+
+         <ActivityIndicator x:Name="loading" HeightRequest="30" Color="Blue" IsRunning="True" 
+                            IsVisible="false"/>
+
+         <ListView x:Name="listViewPersonajes">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                     <StackLayout Orientation="Horizontal" Padding="10">
+                        <Image Source="{Binding image}" WidthRequest="50" 
+                          HeightRequest="50" Aspect="AspectFill"/>
+                         <Label Text="{Binding name}" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
+                          </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Ver Comidas Disponibles"
+                HorizontalOptions="Center" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
