@@ -41,7 +41,7 @@
                 Text="Inicio de sesión anonimo"
                 Command="{Binding AnonymousSignIn}"
                 HorizontalOptions="Center"
-                BackgroundColor="{StaticResource Gray950}"
+                BackgroundColor="{StaticResource Cyan100Accent}"
                 WidthRequest="400"/>
 
         </VerticalStackLayout>
