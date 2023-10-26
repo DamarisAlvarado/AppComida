@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Camera.MAUI;
+using Microsoft.Extensions.Logging;
 
 namespace AppComida
 {
@@ -8,7 +9,7 @@ namespace AppComida
         {
             var builder = MauiApp.CreateBuilder();
             builder
-                .UseMauiApp<App>()
+                .UseMauiApp<App>()               
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
