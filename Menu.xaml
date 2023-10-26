@@ -29,7 +29,7 @@
             BorderWidth="2"
             BorderColor="Bisque"
             FontSize="Medium"
-            
+            Clicked="acerca_de"
             />
         
 

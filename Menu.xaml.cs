@@ -15,4 +15,8 @@ public partial class Menu : ContentPage
         await Navigation.PushAsync(new ListaMenu());
     }
 
+	private async void acerca_de(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new Acerca());
+	}
 }
