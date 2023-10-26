@@ -10,6 +10,11 @@
         Padding="30,0"
         VerticalOptions="Center">
 
+        <Label 
+         Text="Visitanos en nuestra página de facebook"
+         FontSize="32"
+         HorizontalOptions="Center" />
+
         <cv:BarcodeImage BarcodeMargin="5" WidthRequest="300" HeightRequest="300"
                          BarcodeBackground="White"
                          BarcodeForeground="Blue" BarcodeFormat="QR_CODE"
