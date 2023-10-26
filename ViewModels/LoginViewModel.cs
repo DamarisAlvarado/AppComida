@@ -81,6 +81,12 @@ namespace AppComida.ViewModels
         {
             if (Email != null && Password != null)
             {
+                if(Password.Length < 8)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "La contraseña es muy corta", "Ok");
+                    return;
+                }
+
                 UserCredential userCredential;
                 try
                 {
