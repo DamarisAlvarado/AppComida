@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Menu"
-              xmlns:view="clr-namespace:AppComida.ViewModels"
+             xmlns:view="clr-namespace:AppComida.ViewModels"
              BackgroundImageSource="{Binding BackgroundImage}"
-        Title="Menu">
+             Title="Menu">
 
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5" Margin="40" Spacing="20">
 
@@ -50,12 +50,16 @@
             Margin="10"
             Text="Contacto"
 
+
             BackgroundColor="{StaticResource cpiel}"
             TextColor="Black"
             FontSize="Medium"
             BorderWidth="2"
             BorderColor="Bisque"
             Command="{Binding AbrirContacto}"/>
+        
+      
+
 
     </VerticalStackLayout>
 </ContentPage>

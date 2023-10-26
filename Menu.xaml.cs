@@ -8,7 +8,6 @@ public partial class Menu : ContentPage
 	public Menu(MenuViewModel vm)
 	{
 		InitializeComponent();
-
 		BindingContext = vm;
 	}
     private async void lista_comida(object sender, EventArgs e)
