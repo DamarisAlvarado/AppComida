@@ -12,7 +12,7 @@ namespace AppComida.ViewModels
         public Command EmailSignIn { get; }
 
         string _email;
-        public string Email 
+        public string Email
         {
             get => _email;
             set
@@ -38,7 +38,7 @@ namespace AppComida.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public LoginViewModel() 
+        public LoginViewModel()
         {
             var config = new FirebaseAuthConfig
             {
@@ -62,7 +62,7 @@ namespace AppComida.ViewModels
         }
 
         #region INICIO DE SESION ANONIMO
-        public async void SignInAsAnonymous(object obj) 
+        public async void SignInAsAnonymous(object obj)
         {
             var userCredential = await client.SignInAnonymouslyAsync();
             var user = userCredential.User;
@@ -79,7 +79,7 @@ namespace AppComida.ViewModels
         #region INICIO DE SESION CON EMAIL
         public async void SignInWithEmailProvider(object obj)
         {
-            if(Email != null && Password != null)
+            if (Email != null && Password != null)
             {
                 UserCredential userCredential;
                 try
@@ -95,7 +95,7 @@ namespace AppComida.ViewModels
                 }
                 catch
                 {
-                    try 
+                    try
                     {
                         userCredential = await client.CreateUserWithEmailAndPasswordAsync(Email, Password);
                         var user = userCredential.User;
