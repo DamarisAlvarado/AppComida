@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Componer"
              Title="Diseño de e-mail">
+<<<<<<< HEAD
     
     <VerticalStackLayout>
         <Label 
@@ -11,4 +12,44 @@
             HorizontalOptions="Center" />
     </VerticalStackLayout>
     
+=======
+
+    <!-- AMEL: Ventana para componer correos -->
+
+    <!-- #region AMEL: Contenido de la página -->
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="10"
+        Padding="0, 20">
+
+            <Entry 
+                x:Name="subject"
+                Placeholder="Encabezado"
+                Margin="50, 0"
+                />
+
+            <Entry 
+                x:Name="whom"
+                Placeholder="A quien?"
+                Margin="50, 0"
+                />
+
+            <Editor 
+                x:Name="body"
+                Placeholder="Mensaje..."
+                Margin="50, 0"
+                HeightRequest="200"
+                />
+
+            <Button 
+                Clicked="Button_Clicked"
+                Margin="100, 0"
+                Text="Enviar"
+                />
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <!-- #endregion -->
+
+>>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
 </ContentPage>

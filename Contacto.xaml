@@ -59,7 +59,11 @@
                         Text="Contactar"
                         HorizontalOptions="End"
                         Margin="0, 2"
+<<<<<<< HEAD
                         Command="{Binding SendEmail}"
+=======
+                        Command="{Binding OpenEmail}"
+>>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
                         CommandParameter="{Binding Damaris}"/>
                 </StackLayout>
             </Frame>
@@ -70,9 +74,44 @@
                 CornerRadius="12"
                 HasShadow="True"
                 Margin="50, 0">
-                
-                <Label Text="Damaris"/>
-                
+                <StackLayout>
+                    <!-- Nombre -->
+                    <Label 
+                        Text="{Binding Samantha.nombre}"
+                        FontAttributes="Bold"
+                        FontSize="16" />
+
+                    <!-- Linea de separacion -->
+                    <BoxView 
+                        Color="Gray"
+                        HeightRequest="2"
+                        HorizontalOptions="Fill" />
+
+                    <!-- Numero de control -->
+                    <Label
+                        Text="{Binding Samantha.matricula, StringFormat='Matricula: {0}'}"
+                        HorizontalOptions="Fill" />
+
+                    <!-- E-mail -->
+                    <Label 
+                        Text="{Binding Samantha.correo, StringFormat='Correo: {0}'}"
+                        HorizontalOptions="Fill"
+                        Margin="0, 2" />
+
+                    <!-- Telefono -->
+                    <Label 
+                        Text="{Binding Samantha.telefono, StringFormat='Telefono: {0}'}" 
+                        HorizontalOptions="Fill"
+                        Margin="0, 2" />
+
+                    <!-- Boton -->
+                    <Button 
+                        Text="Contactar"
+                        HorizontalOptions="End"
+                        Margin="0, 2"
+                        Command="{Binding OpenEmail}"
+                        CommandParameter="{Binding Samantha}"/>
+                </StackLayout>
             </Frame>
             <!--#endregion-->
 
@@ -81,9 +120,44 @@
                 CornerRadius="12"
                 HasShadow="True"
                 Margin="50, 0">
-                
-                <Label Text="Damaris"/>
-                
+                <StackLayout>
+                    <!-- Nombre -->
+                    <Label 
+                        Text="{Binding Amel.nombre}"
+                        FontAttributes="Bold"
+                        FontSize="16" />        
+
+                    <!-- Linea de separacion -->
+                    <BoxView 
+                    Color="Gray"
+                    HeightRequest="2"
+                    HorizontalOptions="Fill" /> 
+
+                    <!-- Numero de control -->
+                    <Label
+                        Text="{Binding Amel.matricula, StringFormat='Matricula: {0}'}"
+                        HorizontalOptions="Fill" />
+
+                    <!-- E-mail -->
+                    <Label 
+                        Text="{Binding Amel.correo, StringFormat='Correo: {0}'}"
+                        HorizontalOptions="Fill"
+                        Margin="0, 2" />
+
+                    <!-- Telefono -->
+                    <Label 
+                        Text="{Binding Amel.telefono, StringFormat='Telefono: {0}'}" 
+                        HorizontalOptions="Fill"
+                        Margin="0, 2" />
+
+                    <!-- Boton -->
+                    <Button 
+                        Text="Contactar"
+                        HorizontalOptions="End"
+                        Margin="0, 2"
+                        Command="{Binding OpenEmail}"
+                        CommandParameter="{Binding Amel}"/>
+                </StackLayout>
             </Frame>
             <!--#endregion-->
 
