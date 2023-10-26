@@ -10,7 +10,7 @@
         Padding="30,0"
         VerticalOptions="Center">
 
-        <cv:BarcodeImage BarcodeMargin="5" WidthRequest="400" HeightRequest="400"
+        <cv:BarcodeImage BarcodeMargin="5" WidthRequest="300" HeightRequest="300"
                          BarcodeBackground="White"
                          BarcodeForeground="Blue" BarcodeFormat="QR_CODE"
                          Barcode="https://www.facebook.com/"/>
