@@ -111,21 +111,21 @@ namespace AppComida.ViewModels
             OpenEmail = new Command(OpenEmailComposer);
 
             #region AMEL: Objetos que contiene nuestros datos
-            Damaris = new Damaris() 
-            { 
-                nombre="Damaris Alvarado",
-                matricula= "19480887",
-                correo= "L19480887@nuevoleon.tecnm.mx",
-                telefono="8764328787"
+            Damaris = new Damaris()
+            {
+                nombre = "Damaris Alvarado",
+                matricula = "19480887",
+                correo = "L19480887@nuevoleon.tecnm.mx",
+                telefono = "8764328787"
             };
-            Samantha = new Samantha() 
+            Samantha = new Samantha()
             {
                 nombre = "Samantha Flores",
                 matricula = "19480820",
                 correo = "L19480820@nuevoleon.tecnm.mx",
                 telefono = "5430985656"
             };
-            Amel = new Amel() 
+            Amel = new Amel()
             {
                 nombre = "Amel Delgado",
                 matricula = "19720124",

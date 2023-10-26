@@ -108,7 +108,7 @@ namespace AppComida.ViewModels
                     }
                     catch
                     {
-                        await App.Current.MainPage.DisplayAlert("Error", "El correo ya existe", "Ok");
+                        await App.Current.MainPage.DisplayAlert("Error", "El correo ya existe o la contraseña es muy debil", "Ok");
                     }
                 }
                 return;
