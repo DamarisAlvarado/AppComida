@@ -12,18 +12,11 @@
 	- [ ] Acerca de
 - Amel
 	- [ ] Login
-	- [ ] Contacto
+	- [X] Contacto
 	- [ ] Acerca de
 
 # Colores :art:
-Escriban los colores aquí para solo copiar y pegar
-- Rojo:     `#FF0000`
-- Negro:    `#000000`
-- Naranja:  `#FFA500`
-- Blanco:   `#FFFFFF`
-- Amarillo: `#FFFF00`
-estan en la parte de colores.xaml ya con variables
-***@Damaris: Si no son cambialos, por fa***
+***Estan en Colors.xaml***
 
 # Links
 *Aquí van links y otras cosas del proyecto*
