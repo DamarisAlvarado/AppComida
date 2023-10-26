@@ -52,11 +52,7 @@ namespace AppComida.ViewModels
         // AMELa DAMARIS: Este metodo es lo que ejecutará mi comando AbrirContacto
         public async void Abrircontacto(object obj)
         {
-
-            await _navigation.PushAsync(new Contacto(new ContactoViewModel()));
-
             await App.Current.MainPage.Navigation.PushAsync(new Contacto(new ContactoViewModel()));
-
         }
     }
 }
