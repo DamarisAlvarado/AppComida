@@ -17,9 +17,6 @@ namespace AppComida.ViewModels
 
         public Command SendEmail { get; }
 
-        // AMEL: Interfaz para abrir servicio de Email
-        readonly IEmail email;
-
         public Command OpenEmail { get; }
 
         // AMEL: Objeto que controla los cambios de las propiedades del viewmodel
@@ -66,20 +63,20 @@ namespace AppComida.ViewModels
         // AMEL: Metodo para abrir la aplicacion de correos por defecto y enviar el email.
         public async void SendEmailAsync(object obj)
         {
-            if (email.IsComposeSupported)
+            if (Email.Default.IsComposeSupported)
             {
                 switch (obj.GetType().Name.ToString())
                 {
                     case "Damaris":
-                        await email.ComposeAsync("Subject", "Body", _damaris.correo.ToString());
+                        await Email.Default.ComposeAsync("Subject", "Body", _damaris.correo.ToString());
                         break;
 
                     case "Samantha":
-                        await email.ComposeAsync("Subject", "Body", _samantha.correo.ToString());
+                        await Email.Default.ComposeAsync("Subject", "Body", _samantha.correo.ToString());
                         break;
 
                     case "Amel":
-                        await email.ComposeAsync("Subject", "Body", _amel.correo.ToString());
+                        await Email.Default.ComposeAsync("Subject", "Body", _amel.correo.ToString());
                         break;
                 }
             }

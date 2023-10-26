@@ -8,11 +8,6 @@ namespace AppComida.ViewModels
         // AMEL a DAMARIS: Esta variable almacena el nombre de la imagen que mostrará en el menu.
         public string BackgroundImage { get; set; }
 
-
-        // AMEL a DAMARIS: Esta propiedad nos permite utilizar la navegacion de la ventana donde estamos actualmente
-        readonly INavigation _navigation;
-        private INavigation navigation;
-
         // AMEL a DAMARIS: Este constructor se inicia cuando se inicia la ventana
 
         public MenuViewModel()
@@ -29,11 +24,6 @@ namespace AppComida.ViewModels
                 // Si no lo es... cargará "windows.png"
                 BackgroundImage = "windows.png";
             }
-
-
-            // Iniciamos las propiedades abstractas
-            this._navigation = navigation;
-
             this.AbrirContacto = new Command(Abrircontacto);
         }
 
