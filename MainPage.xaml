@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AppComida.ViewModels"
+             x:DataType="viewmodels:LoginViewModel"
              x:Class="AppComida.MainPage">
 
     <ScrollView>
@@ -15,28 +17,32 @@
                 HeightRequest="200"
                 HorizontalOptions="Center" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            <Entry Placeholder="Correo"
+                   Text="{Binding Email}"
+                   x:Name="email"
+                   HorizontalOptions="Center"
+                   WidthRequest="500"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Entry Placeholder="Contraseña"
+                   Text="{Binding Password}"
+                   x:Name="password" 
+                   HorizontalOptions="Center"
+                   WidthRequest="500"/>
 
+            <Button
+                Text="Iniciar sesion"
+                Command="{Binding EmailSignIn}"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                BackgroundColor="{StaticResource White}"
+                WidthRequest="400"/>
+            
             <Button
                 Text="Inicio de sesión anonimo"
                 Command="{Binding AnonymousSignIn}"
-                HorizontalOptions="Center" />
-
-            <!--<Button
-                Text="Crear cuenta"
-                Command="{Binding }"
-                HorizontalOptions="Center" />-->
+                HorizontalOptions="Center"
+                BackgroundColor="{StaticResource Gray950}"
+                WidthRequest="400"/>
 
         </VerticalStackLayout>
     </ScrollView>
