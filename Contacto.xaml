@@ -59,13 +59,10 @@
                         Text="Contactar"
                         HorizontalOptions="End"
                         Margin="0, 2"
-<<<<<<< HEAD
-                        Command="{Binding SendEmail}"
-=======
                         Command="{Binding OpenEmail}"
->>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
                         CommandParameter="{Binding Damaris}"/>
                 </StackLayout>
+                
             </Frame>
             <!--#endregion-->
 

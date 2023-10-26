@@ -3,16 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Componer"
              Title="Diseño de e-mail">
-<<<<<<< HEAD
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-    
-=======
 
     <!-- AMEL: Ventana para componer correos -->
 
@@ -51,5 +41,4 @@
     </ScrollView>
     <!-- #endregion -->
 
->>>>>>> b43548807bbbd135cb02d98b14646178e1673c4f
 </ContentPage>

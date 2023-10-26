@@ -49,9 +49,6 @@
             WidthRequest="450" 
             Margin="10"
             Text="Contacto"
-
-
-
             BackgroundColor="{StaticResource cpiel}"
             TextColor="Black"
             FontSize="Medium"

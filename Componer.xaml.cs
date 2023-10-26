@@ -1,16 +1,9 @@
-
 using AppComida.ViewModels;
 
 namespace AppComida;
 
 public partial class Componer : ContentPage
 {
-
-	public Componer()
-	{
-		InitializeComponent();
-	}
-
 	public Componer(string _whom)
 	{
 		InitializeComponent();

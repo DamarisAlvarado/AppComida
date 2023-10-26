@@ -53,7 +53,7 @@ namespace AppComida.ViewModels
         public async void Abrircontacto(object obj)
         {
 
-            await _navigation.PushAsync(new Contacto(new ContactoViewModel(Email.Default)));
+            await _navigation.PushAsync(new Contacto(new ContactoViewModel()));
 
             await App.Current.MainPage.Navigation.PushAsync(new Contacto(new ContactoViewModel()));
 
