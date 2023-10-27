@@ -14,12 +14,9 @@
               RowSpacing="10"
               ColumnSpacing="10">
 
-    <Image Grid.ColumnSpan="3"
-                   Source="dotnet_bot.svg"
-                   BackgroundColor="MediumPurple"/>
 
             <Entry 
-        Placeholder="Enter Name"
+        Placeholder="Comentar"
         Text="{Binding Text}"
         Grid.Row="1"/>
             
