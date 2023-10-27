@@ -9,7 +9,6 @@ namespace AppComida
         {
             InitializeComponent();
             BindingContext = lvm;
-
         }
 
         private async void OnCounterClicked(object sender, EventArgs e)
