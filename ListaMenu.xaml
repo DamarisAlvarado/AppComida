@@ -18,7 +18,7 @@
                 <DataTemplate>
                   <ViewCell>
                      <StackLayout Orientation="Horizontal" Padding="10">
-                        <Image Source="{Binding url}" WidthRequest="50" 
+                        <Image Source="{Binding image}" WidthRequest="50" 
                           HeightRequest="50" Aspect="AspectFill"/>
                          <Label Text="{Binding name}" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
                           </StackLayout>
