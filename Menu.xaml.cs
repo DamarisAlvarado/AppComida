@@ -22,7 +22,9 @@ public partial class Menu : ContentPage
     }
 
 	private async void acerca_de(object sender, EventArgs e)
+
 	{
+		 
 		await Navigation.PushAsync(new Acerca());
 	}
 }

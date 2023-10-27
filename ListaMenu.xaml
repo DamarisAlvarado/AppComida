@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.ListaMenu"
+             
              Title="ListaMenu">
     
     <ScrollView>
@@ -14,14 +15,15 @@
                             IsVisible="false"/>
 
          <ListView x:Name="listViewPersonajes">
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate >
                 <DataTemplate>
-                  <ViewCell>
-                     <StackLayout Orientation="Horizontal" Padding="10">
-                        <Image Source="{Binding image}" WidthRequest="50" 
-                          HeightRequest="50" Aspect="AspectFill"/>
-                         <Label Text="{Binding name}" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
-                          </StackLayout>
+                  <ViewCell >
+                     <StackLayout Orientation="Horizontal" Padding="5" >
+                        <Image Source="{Binding image}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                                <Label Text="{Binding name , StringFormat='Nombre: {0}'}" VerticalTextAlignment="Center" Margin="10,0,0,0" />
+                                <Label Text="{Binding status , StringFormat='Estatus: {0}'}" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
+                                <Label Text="{Binding species , StringFormat='Especie: {0}'}" VerticalTextAlignment="Center" Margin="10,0,0,0"/>
+                            </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
