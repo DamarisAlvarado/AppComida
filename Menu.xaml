@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Menu"
              xmlns:view="clr-namespace:AppComida.ViewModels"
-             BackgroundImageSource="{Binding BackgroundImage}"
+             BackgroundColor="White"
              Title="Menu">
 
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5" Margin="40" Spacing="20">
@@ -11,12 +11,10 @@
         <Button
             WidthRequest="450"
             Margin="10"
-            Text="Ver lista de comida"
-            BackgroundColor= "{StaticResource cpiel}"
-            TextColor="Black"
+            Text="Ver Personajes"
+            BackgroundColor= "{StaticResource Primero}"
+            TextColor="{StaticResource Quinto}"
             FontSize="Medium"
-            BorderWidth="2"
-            BorderColor="Bisque"
             Clicked="lista_comida"
             />
 
@@ -24,10 +22,8 @@
             WidthRequest="450"
             Margin="10"
             Text="Acerca de"
-            BackgroundColor="{StaticResource cpiel}"
-            TextColor="Black"
-            BorderWidth="2"
-            BorderColor="Bisque"
+            BackgroundColor="{StaticResource Quinto}"
+            TextColor="White"
             FontSize="Medium"
             Clicked="acerca_de"
             />
@@ -37,11 +33,10 @@
             WidthRequest="450"
             Margin="10"
             Text="Comentarios"
-            BackgroundColor="{StaticResource cpiel}"
-            TextColor="Black"
+            BackgroundColor= "{StaticResource Primero}"
+            TextColor="{StaticResource Quinto}"
             FontSize="Medium"
-            BorderWidth="2"
-            BorderColor="Bisque"
+
          
             />
 
@@ -49,11 +44,9 @@
             WidthRequest="450" 
             Margin="10"
             Text="Contacto"
-            BackgroundColor="{StaticResource cpiel}"
-            TextColor="Black"
+            BackgroundColor="{StaticResource Quinto}"
+            TextColor="White"
             FontSize="Medium"
-            BorderWidth="2"
-            BorderColor="Bisque"
             Command="{Binding AbrirContacto}"/>
 
 

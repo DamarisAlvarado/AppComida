@@ -23,4 +23,8 @@ public partial class ListaMenu : ContentPage
 
 
     }
+    public async void favAsync(object sender, EventArgs e)
+    {
+        await DisplayAlert("Favoritos", "Este personaje se agrego a favoritos", "OK");
+    }
 }
