@@ -1,4 +1,6 @@
 ﻿using Camera.MAUI;
+using Esri.ArcGISRuntime;
+using Esri.ArcGISRuntime.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace AppComida
@@ -18,6 +20,9 @@ namespace AppComida
 
             // AMEL a TODOS: Servicio para abrir la aplicacion de e-mail por defaul del dispositivo
             builder.Services.AddSingleton<IEmail>(Email.Default);
+
+            // ApiKey
+            builder.UseArcGISRuntime(config => config.UseApiKey("AAPKb38cbc5553334941b9a91067b2e3edb6qjLlpStmqVteq4an7tLkI5scHEzkzeuFazeWLtqUh6C95KvK9qLG8uMoPdqSNUOh"));
 
 #if DEBUG
 		builder.Logging.AddDebug();

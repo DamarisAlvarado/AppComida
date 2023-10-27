@@ -3,24 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="AppComida.Acerca"
-             Title="Acerca">
-    
-    <VerticalStackLayout
-        Spacing="25"
-        Padding="30,0"
-        VerticalOptions="Center">
+             Title="Acerca"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+             xmlns:local="clr-namespace:AppComida.ViewModels">
 
-        <Label 
-         Text="Visitanos en nuestra página de facebook"
-         FontSize="32"
-         HorizontalOptions="Center" />
+    <ContentPage.Resources>
+        <local:AcercaViewModel x:Key="AcercaViewModel" />
+    </ContentPage.Resources>
 
-        <cv:BarcodeImage BarcodeMargin="5" WidthRequest="300" HeightRequest="300"
-                         BarcodeBackground="White"
-                         BarcodeForeground="Blue" BarcodeFormat="QR_CODE"
-                         Barcode="https://www.facebook.com/"/>
-        
-        
-        
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="50,30"
+            VerticalOptions="Center">
+
+            <Label 
+             Text="Visitanos en nuestra página de facebook"
+             FontSize="32"
+             HorizontalOptions="Center" />
+
+            <cv:BarcodeImage BarcodeMargin="5" WidthRequest="300" HeightRequest="300"
+                             BarcodeBackground="White"
+                             BarcodeForeground="Blue" BarcodeFormat="QR_CODE"
+                             Barcode="https://www.facebook.com/"/>
+
+            <Label 
+                Text="Tambien puedes encontrarnos aquí"
+                FontSize="32"
+                HorizontalOptions="Center"/>
+
+            <esri:MapView x:Name="MainMapView" 
+                          Map="{Binding Map, Source={StaticResource AcercaViewModel}}"
+                          GraphicsOverlays="{Binding GraphicsOverlays, Source={StaticResource AcercaViewModel}}"
+                          HeightRequest="600"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
