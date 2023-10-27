@@ -12,11 +12,18 @@
     <Color x:Key="cazul">#1c3c40</Color>
 
     <!-- AMEL a TODOS: Colores de prueba, no los borren -->
-    <Color x:Key="Primero">#FE2712</Color>
-    <Color x:Key="Segundo">#0247FE</Color>
-    <Color x:Key="Tercero">#D4DDF7</Color>
-    <Color x:Key="Cuarto">#FEFE33</Color>
-    <Color x:Key="Quinto">#340D09</Color>
+    <Color x:Key="Primero">#B7E4F9</Color>
+    <Color x:Key="Segundo">#FAFD7C</Color>
+    <Color x:Key="Cuarto">#82491E</Color>
+    <Color x:Key="Quinto">#24325F</Color>
+    <Color x:Key="Tercero">#526E2D</Color>
+    <Color x:Key="Sexto">#E762D7</Color>
+    <Color x:Key="Septimo">#E89242</Color>
+    <Color x:Key="Octavo">#FAE48B</Color>
+    <Color x:Key="Noveno">#A6EEE6</Color>
+    <Color x:Key="Decimo">#917C5D</Color>
+    <Color x:Key="Onceavo">#69C8EC</Color>
+    <Color x:Key="Doceavo">#FB6467</Color>
 
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
