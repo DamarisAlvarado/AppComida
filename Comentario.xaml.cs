@@ -1,3 +1,5 @@
+using AppComida.ViewModels;
+
 namespace AppComida;
 
 public partial class Comentario : ContentPage
@@ -5,9 +7,11 @@ public partial class Comentario : ContentPage
 	public Comentario()
 	{
 		InitializeComponent();
+        BindingContext = new Comentarios();
 	}
 
-    private async void agregar_foto(object sender, EventArgs e)
+    // Esto se movio al Comentarios (ViewModel)
+    /* private async void agregar_foto(object sender, EventArgs e)
 
     {
         var foto = await MediaPicker.PickPhotoAsync();
@@ -16,5 +20,5 @@ public partial class Comentario : ContentPage
             var memoriaStream = await foto.OpenReadAsync();
             imgFoto.Source = ImageSource.FromStream(()=> memoriaStream);
         }
-    }
+    }*/
 }
