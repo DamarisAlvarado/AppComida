@@ -36,8 +36,14 @@
             BackgroundColor= "{StaticResource Primero}"
             TextColor="{StaticResource Quinto}"
             FontSize="Medium"
+<<<<<<< HEAD
 
          
+=======
+            BorderWidth="2"
+            BorderColor="Bisque"
+            Clicked="comentario_"
+>>>>>>> 7e844a9cfc3bb55196755aee485a35ec72061e1f
             />
 
         <Button
