@@ -7,14 +7,14 @@ public partial class Comentario : ContentPage
 		InitializeComponent();
 	}
 
-    //private async void agregar_foto(object sender, EventArgs e)
+    private async void agregar_foto(object sender, EventArgs e)
 
-   // {
-     //   var foto = await MediaPicker.PickPhotoAsync();
-   //     if (foto != null) 
-    //    {
-   //         var memoriaStream = await foto.OpenReadAsync();
-    //        imgFoto.Source = ImageSource.FromStream(()=> memoriaStream);
-    //    }
-   // }
+    {
+        var foto = await MediaPicker.PickPhotoAsync();
+        if (foto != null) 
+        {
+            var memoriaStream = await foto.OpenReadAsync();
+        //    imgFoto.Source = ImageSource.FromStream(()=> memoriaStream);
+        }
+    }
 }
