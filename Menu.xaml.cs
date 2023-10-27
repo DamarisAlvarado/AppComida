@@ -23,7 +23,6 @@ public partial class Menu : ContentPage
 
 	private async void acerca_de(object sender, EventArgs e)
 	{
-		// AMEL a SAM: Le pase la aplicacion Launcher por default
 		await Navigation.PushAsync(new Acerca(Launcher.Default));
 	}
 }
