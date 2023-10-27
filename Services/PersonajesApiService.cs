@@ -11,7 +11,7 @@ namespace AppComida.Services
 {
     public class PersonajesApiService : IPersonajesMService
     {
-        private string urlApi = "https://pokeapi.co/api/v2/type/3";
+        private string urlApi = "https://rickandmortyapi.com/api/character";
         
         public async Task<List<Personajes>> Obtener()
         {
@@ -19,7 +19,7 @@ namespace AppComida.Services
             var response = await client.GetAsync(urlApi);
             var responseBody = await response.Content.ReadAsStringAsync();
             JsonNode nodos = JsonNode.Parse(responseBody);
-            JsonNode results = nodos["moves"];
+            JsonNode results = nodos["results"];
             var personajeData = JsonSerializer.Deserialize<List<Personajes>>(results.ToString());
             return personajeData;
         }
