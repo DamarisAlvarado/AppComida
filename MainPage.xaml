@@ -8,41 +8,51 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
+            Padding="30,30"
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
+                Source="icon.png"
+                HeightRequest="150"
                 HorizontalOptions="Center" />
 
             <Entry Placeholder="Correo"
+                   FontFamily="Verdana"
                    Text="{Binding Email}"
                    x:Name="email"
                    HorizontalOptions="Center"
-                   WidthRequest="500"/>
+                   WidthRequest="300"/>
 
             <Entry Placeholder="Contraseña"
+                   FontFamily="Verdana"
                    Text="{Binding Password}"
                    x:Name="password" 
                    HorizontalOptions="Center"
-                   WidthRequest="500"/>
+                   IsPassword="True"
+                   TextColor="{StaticResource Quinto}"
+                   WidthRequest="300"/>
 
+            <Label Text="¡Bienvenido!"
+                   FontFamily="Verdana"
+                   HorizontalOptions="Center"/>
             <Button
+                FontFamily="Verdana"
                 Text="Iniciar sesion"
                 Command="{Binding EmailSignIn}"
                 HorizontalOptions="Center"
-                TextColor="Black"
-                BackgroundColor="{StaticResource White}"
-                WidthRequest="400"/>
-            
+                BackgroundColor="{StaticResource Primero}"
+                WidthRequest="250"/>
+
+            <Label Text="¿Quieres iniciar en modo incognito?"
+                   FontFamily="Verdana"
+                   HorizontalOptions="Center"/>
             <Button
+                FontFamily="Verdana"
                 Text="Inicio de sesión anonimo"
                 Command="{Binding AnonymousSignIn}"
                 HorizontalOptions="Center"
-                BackgroundColor="{StaticResource Cyan100Accent}"
-                WidthRequest="400"/>
+                BackgroundColor="{StaticResource Segundo}"
+                WidthRequest="250"/>
 
         </VerticalStackLayout>
     </ScrollView>
