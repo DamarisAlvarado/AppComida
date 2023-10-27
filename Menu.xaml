@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppComida.Menu"
              xmlns:view="clr-namespace:AppComida.ViewModels"
-             BackgroundColor="White"
+             BackgroundColor="{StaticResource Quinto}"
              Title="Menu">
 
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="5" Margin="40" Spacing="20">
@@ -13,7 +13,10 @@
             Margin="10"
             Text="Ver Personajes"
             BackgroundColor= "{StaticResource Primero}"
-            TextColor="{StaticResource Quinto}"
+            TextColor="{StaticResource Black}"
+            FontAttributes="Bold"
+            BorderColor="{StaticResource Tercero}"
+            BorderWidth="3"
             FontSize="Medium"
             Clicked="lista_comida"
             />
@@ -22,8 +25,11 @@
             WidthRequest="450"
             Margin="10"
             Text="Acerca de"
-            BackgroundColor="{StaticResource Quinto}"
-            TextColor="White"
+            BackgroundColor="{StaticResource Segundo}"
+            FontAttributes="Bold"
+            BorderColor="{StaticResource Tercero}"
+            BorderWidth="3"
+            TextColor="{StaticResource Black}"
             FontSize="Medium"
             Clicked="acerca_de"
             />
@@ -34,10 +40,11 @@
             Margin="10"
             Text="Comentarios"
             BackgroundColor= "{StaticResource Primero}"
-            TextColor="{StaticResource Quinto}"
+            TextColor="{StaticResource Black}"
             FontSize="Medium"
-            BorderWidth="2"
-            BorderColor="Bisque"
+            FontAttributes="Bold"
+            BorderColor="{StaticResource Tercero}"
+            BorderWidth="3"
             Clicked="comentario_"
             />
 
@@ -45,9 +52,12 @@
             WidthRequest="450" 
             Margin="10"
             Text="Contacto"
-            BackgroundColor="{StaticResource Quinto}"
-            TextColor="White"
+            BackgroundColor="{StaticResource Segundo}"
+            TextColor="{StaticResource Black}"
             FontSize="Medium"
+            FontAttributes="Bold"
+            BorderColor="{StaticResource Tercero}"
+            BorderWidth="3"
             Command="{Binding AbrirContacto}"/>
 
 
