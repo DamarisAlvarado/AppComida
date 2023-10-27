@@ -25,7 +25,7 @@
                 Grid.Column="3"/>  
 
          <Button
-            ImageSource="dotnet_dot.svg"
+            ImageSource="dotnet_bot.svg"
             HeightRequest="100" 
             WidthRequest="150"
             Clicked="agregar_foto"  
