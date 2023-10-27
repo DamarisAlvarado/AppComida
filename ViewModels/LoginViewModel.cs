@@ -64,14 +64,20 @@ namespace AppComida.ViewModels
         #region INICIO DE SESION ANONIMO
         public async void SignInAsAnonymous(object obj)
         {
+            App.Current.MainPage.IsBusy = true;
+            App.Current.MainPage.IsEnabled = false;
             var userCredential = await client.SignInAnonymouslyAsync();
             var user = userCredential.User;
 
             if (user == null)
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Error al iniciar sesion", "Ok");
+                App.Current.MainPage.IsBusy = false;
+                App.Current.MainPage.IsEnabled = true;
                 return;
             }
+            App.Current.MainPage.IsBusy = false;
+            App.Current.MainPage.IsEnabled = true;
             await App.Current.MainPage.Navigation.PushAsync(new Menu(new MenuViewModel()));
         }
         #endregion
@@ -79,11 +85,15 @@ namespace AppComida.ViewModels
         #region INICIO DE SESION CON EMAIL
         public async void SignInWithEmailProvider(object obj)
         {
+            App.Current.MainPage.IsBusy = true;
+            App.Current.MainPage.IsEnabled = false;
             if (Email != null && Password != null)
             {
                 if(Password.Length < 8)
                 {
                     await App.Current.MainPage.DisplayAlert("Error", "La contraseña es muy corta", "Ok");
+                    App.Current.MainPage.IsBusy = false;
+                    App.Current.MainPage.IsEnabled = true;
                     return;
                 }
 
@@ -95,8 +105,12 @@ namespace AppComida.ViewModels
                     if (user == null)
                     {
                         await App.Current.MainPage.DisplayAlert("Error", "Error al iniciar sesion", "Ok");
+                        App.Current.MainPage.IsBusy = false;
+                        App.Current.MainPage.IsEnabled = true;
                         return;
                     }
+                    App.Current.MainPage.IsBusy = false;
+                    App.Current.MainPage.IsEnabled = true;
                     await App.Current.MainPage.Navigation.PushAsync(new Menu(new MenuViewModel()));
                 }
                 catch
@@ -108,8 +122,12 @@ namespace AppComida.ViewModels
                         if (user == null)
                         {
                             await App.Current.MainPage.DisplayAlert("Error", "Error al iniciar sesion", "Ok");
+                            App.Current.MainPage.IsBusy = false;
+                            App.Current.MainPage.IsEnabled = true;
                             return;
                         }
+                        App.Current.MainPage.IsBusy = false;
+                        App.Current.MainPage.IsEnabled = true;
                         await App.Current.MainPage.Navigation.PushAsync(new Menu(new MenuViewModel()));
                     }
                     catch
@@ -117,8 +135,12 @@ namespace AppComida.ViewModels
                         await App.Current.MainPage.DisplayAlert("Error", "El correo ya existe o la contraseña es muy debil", "Ok");
                     }
                 }
+                App.Current.MainPage.IsBusy = false;
+                App.Current.MainPage.IsEnabled = true;
                 return;
             }
+            App.Current.MainPage.IsBusy = false;
+            App.Current.MainPage.IsEnabled = true;
             await App.Current.MainPage.DisplayAlert("Atencion", "Rellena todos los campos", "OK");
         }
         #endregion

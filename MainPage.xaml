@@ -50,7 +50,7 @@
                    IsPassword="True"
                    WidthRequest="350"/>
 
-            <Label Text="¡Hola compañero!, ¿o debería decir nuevo compañero?"
+            <Label Text="¡Hola de nuevo!"
                    FontFamily="Verdana"
                    FontSize="16"
                    TextColor="{StaticResource Primero}"
