@@ -23,20 +23,20 @@
         Text="{Binding Text}"
         Grid.Row="1"/>
             
-            <ImageButton
-            Source="dotnet_bot.svg"
-            SemanticProperties.Hint="Counts the number of times you click"
-            HeightRequest="100"
-            Clicked="agregar_foto"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
+         <!--    <ImageButton
+            Source="dotnet_bot.svg" 
+            SemanticProperties.Hint="Counts the number of times you click" 
+            HeightRequest="100" 
+            Clicked="agregar_foto"  
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"/> -->
 
-        <Image x:Name="imgFoto"/>
+      <!--  <Image x:Name="imgFoto"/> -->
 
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <!--   </VerticalStackLayout> -->
+       <!-- <Label   
+            Text="Welcome to .NET MAUI!"  
+            VerticalOptions="Center"  
+            HorizontalOptions="Center" /> 
+          </VerticalStackLayout> --> 
         </Grid>
 </ContentPage>
