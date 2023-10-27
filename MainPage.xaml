@@ -4,6 +4,7 @@
              xmlns:viewmodels="clr-namespace:AppComida.ViewModels"
              x:DataType="viewmodels:LoginViewModel"
              Title="¡Hola!"
+             BackgroundColor="{StaticResource Quinto}"
              x:Class="AppComida.MainPage">
 
     <ScrollView>
@@ -22,18 +23,21 @@
                    Text="{Binding Email}"
                    x:Name="email"
                    HorizontalOptions="Center"
+                   BackgroundColor="White"
                    WidthRequest="350"/>
 
             <Entry Placeholder="Contraseña"
                    FontFamily="Verdana"
                    Text="{Binding Password}"
                    x:Name="password" 
+                   BackgroundColor="White"
                    HorizontalOptions="Center"
                    IsPassword="True"
                    WidthRequest="350"/>
 
             <Label Text="¡Bienvenido!"
                    FontFamily="Verdana"
+                   TextColor="White"
                    HorizontalOptions="Center"/>
             <Button
                 FontFamily="Verdana"
@@ -46,6 +50,7 @@
 
             <Label Text="¿Quieres iniciar en modo incognito?"
                    FontFamily="Verdana"
+                   TextColor="White"
                    HorizontalOptions="Center"/>
             <Button
                 FontFamily="Verdana"
