@@ -8,7 +8,7 @@
         Padding="50,30" 
         VerticalOptions="Center">  -->
 
-    <Grid RowDefinitions="100,Auto, *"
+    <Grid RowDefinitions="50,Auto, *"
               ColumnDefinitions=".35*,.35*,.30*"
               Padding="10"
               RowSpacing="10"
