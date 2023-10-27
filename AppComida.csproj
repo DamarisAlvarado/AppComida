@@ -51,6 +51,8 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\fondo.jpg" />
 	  <None Remove="Resources\Images\icon.png" />
+	  <None Remove="Resources\Images\morty.png" />
+	  <None Remove="Resources\Images\rick.png" />
 	  <None Remove="Resources\Images\windows.png" />
 	</ItemGroup>
 

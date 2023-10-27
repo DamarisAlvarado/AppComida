@@ -13,10 +13,25 @@
             Padding="30,30"
             VerticalOptions="Center">
 
-            <Image
-                Source="icon.png"
-                HeightRequest="150"
-                HorizontalOptions="Center" />
+            <Grid ColumnDefinitions="Auto, Auto"
+                  ColumnSpacing="1"
+                  HorizontalOptions="Center">
+
+                <Image
+                    Grid.Column="0"
+                    Source="rick.png"
+                    HeightRequest="150"
+                    HorizontalOptions="Center" />
+
+                <Image
+                    Grid.Column="1"
+                    Source="morty.png"
+                    HeightRequest="150"
+                    HorizontalOptions="Center" />
+                
+            </Grid>
+            
+            
 
             <Entry Placeholder="Correo"
                    FontFamily="Verdana"
