@@ -26,4 +26,10 @@ public partial class Menu : ContentPage
 	{
 		await Navigation.PushAsync(new Acerca(Launcher.Default));
 	}
+
+    private async void comentario_(object sender, EventArgs e)
+
+    {
+        await Navigation.PushAsync(new Comentario());
+    }
 }
