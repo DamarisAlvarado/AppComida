@@ -5,8 +5,13 @@
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
-            MainPage = new NavigationPage(new MainPage(new ViewModels.LoginViewModel()));
+
+            NavigationPage navigationPage = new NavigationPage(new MainPage(new ViewModels.LoginViewModel()));
+            Color color = Color.FromArgb("#0247FE");
+            navigationPage.BarBackgroundColor = color;
+            navigationPage.BarTextColor = new Color(255, 255, 255);
+
+            MainPage = navigationPage;
         }
     }
 }

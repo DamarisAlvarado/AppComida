@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:AppComida.ViewModels"
              x:DataType="viewmodels:LoginViewModel"
+             Title="¡Hola!"
              x:Class="AppComida.MainPage">
 
     <ScrollView>
@@ -21,7 +22,7 @@
                    Text="{Binding Email}"
                    x:Name="email"
                    HorizontalOptions="Center"
-                   WidthRequest="300"/>
+                   WidthRequest="350"/>
 
             <Entry Placeholder="Contraseña"
                    FontFamily="Verdana"
@@ -30,7 +31,7 @@
                    HorizontalOptions="Center"
                    IsPassword="True"
                    TextColor="{StaticResource Quinto}"
-                   WidthRequest="300"/>
+                   WidthRequest="350"/>
 
             <Label Text="¡Bienvenido!"
                    FontFamily="Verdana"
