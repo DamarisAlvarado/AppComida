@@ -16,14 +16,7 @@
             Spacing="25"
             Padding="50,30"
             VerticalOptions="Center">
-
-            <Button 
-                Text="Contactanos por Whatsapp"
-                Clicked="btnwhatsapp"
-                FontSize="32"
-                HorizontalOptions="Center" />
-                     
-
+          
             <Label 
                 Text="Visitanos en nuestra página de facebook"
                 FontSize="32"
