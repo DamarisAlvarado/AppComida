@@ -24,6 +24,8 @@ namespace AppComida
             // ApiKey
             builder.UseArcGISRuntime(config => config.UseApiKey("AAPKb38cbc5553334941b9a91067b2e3edb6qjLlpStmqVteq4an7tLkI5scHEzkzeuFazeWLtqUh6C95KvK9qLG8uMoPdqSNUOh"));
 
+            //
+
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif

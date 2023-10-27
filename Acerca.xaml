@@ -18,9 +18,15 @@
             VerticalOptions="Center">
 
             <Label 
-             Text="Visitanos en nuestra página de facebook"
-             FontSize="32"
-             HorizontalOptions="Center" />
+                Text="Contactanos por Whatsapp"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            
+
+            <Label 
+                Text="Visitanos en nuestra página de facebook"
+                FontSize="32"
+                HorizontalOptions="Center" />
 
             <cv:BarcodeImage BarcodeMargin="5" WidthRequest="300" HeightRequest="300"
                              BarcodeBackground="White"
