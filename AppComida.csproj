@@ -49,10 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\amel.jpg" />
+	  <None Remove="Resources\Images\damaris.jpg" />
 	  <None Remove="Resources\Images\fondo.jpg" />
 	  <None Remove="Resources\Images\icon.png" />
 	  <None Remove="Resources\Images\morty.png" />
 	  <None Remove="Resources\Images\rick.png" />
+	  <None Remove="Resources\Images\sam.jpeg" />
 	  <None Remove="Resources\Images\windows.png" />
 	</ItemGroup>
 
