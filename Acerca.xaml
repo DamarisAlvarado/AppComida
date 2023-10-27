@@ -19,5 +19,8 @@
                          BarcodeBackground="White"
                          BarcodeForeground="Blue" BarcodeFormat="QR_CODE"
                          Barcode="https://www.facebook.com/"/>
+        
+        
+        
     </VerticalStackLayout>
 </ContentPage>
