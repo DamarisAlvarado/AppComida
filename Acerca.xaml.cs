@@ -2,8 +2,11 @@ namespace AppComida;
 
 public partial class Acerca : ContentPage
 {
-	public Acerca()
+    private readonly ILauncher laucher;
+
+    public Acerca(ILauncher laucher)
 	{
 		InitializeComponent();
-	}
+        this.laucher = laucher;
+    }
 }
