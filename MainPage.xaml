@@ -30,7 +30,6 @@
                    x:Name="password" 
                    HorizontalOptions="Center"
                    IsPassword="True"
-                   TextColor="{StaticResource Quinto}"
                    WidthRequest="350"/>
 
             <Label Text="¡Bienvenido!"
@@ -39,6 +38,7 @@
             <Button
                 FontFamily="Verdana"
                 Text="Iniciar sesion"
+                TextColor="{StaticResource Quinto}"
                 Command="{Binding EmailSignIn}"
                 HorizontalOptions="Center"
                 BackgroundColor="{StaticResource Primero}"
@@ -50,6 +50,7 @@
             <Button
                 FontFamily="Verdana"
                 Text="Inicio de sesión anonimo"
+                TextColor="{StaticResource Quinto}"
                 Command="{Binding AnonymousSignIn}"
                 HorizontalOptions="Center"
                 BackgroundColor="{StaticResource Segundo}"
