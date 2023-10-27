@@ -12,7 +12,7 @@ public partial class ListaMenu : ContentPage
 		_personajesMService = service;
 	}
 
-    private async void OnCounterClicked(object sender, EventArgs e)
+    private async void verPokemon(object sender, EventArgs e)
     {
         loading.IsVisible = true;
 
