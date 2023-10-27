@@ -51,8 +51,13 @@ namespace AppComida.ViewModels
                 ImageResult = foto;
                 var memoriaStream = await foto.OpenReadAsync();
                 ImageSource = ImageSource.FromStream(() => memoriaStream);
+                await App.Current.MainPage.DisplayAlert("Imagen", "Imagen Subida con exito", "Aceptar");
+
             }
+            
         }
+
+       
         #endregion
 
         #region TEXTO O COMENTARIO
@@ -76,17 +81,27 @@ namespace AppComida.ViewModels
         #endregion
 
         #region AGREGAR COMENTARIO
+
+        //DAMARIS A SAM Y AMEL NO MOVER NADA
         public Command InsertarComentario { get; }
 
         public async void ComentarioInsertar(object obj)
         {
             var memoriaStream = await _imageResult.OpenReadAsync();
-            Comentario.Add(new ComentarioModel()
+            if ((Comentario != null && !string.IsNullOrEmpty(Texto)))
             {
-                Source = ImageSource.FromStream(() => memoriaStream),
-                Comentario = this.Texto
-            });
-            OnPropertyChanged(nameof(Comentario));
+                
+                Comentario.Add(new ComentarioModel()
+                {
+                    Source = ImageSource.FromStream(() => memoriaStream),
+                    Comentario = this.Texto
+                });
+                OnPropertyChanged(nameof(Comentario));
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert("Agregar Comentario", "Favor de llenar el comentario o subir foto", "Aceptar");
+            }
         }
         #endregion
 

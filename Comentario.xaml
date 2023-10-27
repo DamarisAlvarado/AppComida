@@ -5,40 +5,45 @@
              xmlns:viewmodel="clr-namespace:AppComida.ViewModels"
              xmlns:model="clr-namespace:AppComida.Models"
              x:DataType="viewmodel:Comentarios"
+             BackgroundColor="{StaticResource Quinto}"
              Title="Comentarios">
-  <!--  <VerticalStackLayout
-        Spacing="25"
-        Padding="50,30" 
-        VerticalOptions="Center">  -->
-    
+
     <ScrollView>
         <VerticalStackLayout>
+            <Label Margin="30" FontSize="Medium"  TextColor="{StaticResource White}" Text="Agrega sugerencias y más" />
             <Grid RowDefinitions="Auto"
                 ColumnDefinitions=".15*,.35*,.30*"
                 Padding="10"
                 RowSpacing="10"
                 ColumnSpacing="10">
 
-                <ImageButton
-                x:Name="imgFoto"
-                Source="{Binding ImageSource}"
-                HeightRequest="100" 
-                Aspect="AspectFill"
-                WidthRequest="150"
-                Command="{Binding CargarImagen}"
+                <Button Text="Subir Imagen"
                 Grid.Row="0" 
-                Grid.Column="0"/>
-
+                Grid.Column="0"
+                BackgroundColor="{StaticResource Primero}"
+                TextColor="{StaticResource Quinto}"
+                FontAttributes="Bold"   
+                Command="{Binding CargarImagen}"        
+                        />
+                
                 <Entry 
                 Placeholder="Comentar"
+                PlaceholderColor="{StaticResource Tercero}"
                 Text="{Binding Texto}"
+                TextColor="{StaticResource Quinto}"
+                BackgroundColor="Beige"
                 Grid.Row="0"
-                Grid.Column="1"/>
+                Grid.Column="1"
+               />
+            
+                <Button  Text="Agregar"        
+                 Grid.Row="0" 
+                 BackgroundColor="{StaticResource Primero}"
+                 TextColor="{StaticResource Quinto}"
+                 FontAttributes="Bold" 
+                 Command="{Binding InsertarComentario}"
+                 Grid.Column="2"/>
 
-                <Button Text="Agregar"        
-                    Grid.Row="0"
-                    Command="{Binding InsertarComentario}"
-                    Grid.Column="2"/>
             </Grid>
 
             <VerticalStackLayout>
@@ -46,10 +51,10 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:ComentarioModel">
                             <Grid Padding="10">
-                                <Frame HeightRequest="125">
+                                <Frame Margin="10" HeightRequest="200" BackgroundColor="{StaticResource Segundo}" >
                                     <Grid ColumnSpacing="5" ColumnDefinitions="125,*">
-                                        <Image Source="{Binding Source}" Aspect="AspectFill" Grid.Column="0"/>
-                                        <Label Text="{Binding Comentario}" VerticalTextAlignment="Center" Grid.Column="1"/>
+                                        <Image  Source="{Binding Source}" Aspect="AspectFill" HeightRequest="150" Grid.Column="0"/>
+                                        <Label Padding="20"  TextColor="{StaticResource Quinto}" FontAttributes="Bold" Text="{Binding Comentario}" Margin="10" VerticalTextAlignment="Center" Grid.Column="1"/>
                                     </Grid>
                                 </Frame>
                             </Grid>
