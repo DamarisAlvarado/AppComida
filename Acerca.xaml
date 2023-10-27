@@ -17,17 +17,12 @@
             Padding="50,30"
             VerticalOptions="Center">
 
-            <Label 
+            <Button 
                 Text="Contactanos por Whatsapp"
+                Clicked="btnwhatsapp"
                 FontSize="32"
                 HorizontalOptions="Center" />
-            
-            <ImageButton                          
-            Source="dotnet_bot.svg"
-            SemanticProperties.Hint="Counts the number of times you click"
-            HeightRequest="50"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
+                     
 
             <Label 
                 Text="Visitanos en nuestra página de facebook"
