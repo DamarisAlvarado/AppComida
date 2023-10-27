@@ -25,8 +25,7 @@
                 Grid.Column="3"/>  
 
          <Button
-            
-            SemanticProperties.Hint="Counts the number of times you click"  
+            ImageSource="dotnet_dot.svg"
             HeightRequest="100" 
             WidthRequest="150"
             Clicked="agregar_foto"  
