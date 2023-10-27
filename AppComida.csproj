@@ -32,7 +32,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\rick.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#526E2D" />
+		<MauiIcon Include="Resources\AppIcon\rick.svg" ForegroundFile="Resources\AppIcon\rick.svg" Color="#526E2D" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Images\morty.png" Color="#526E2D" BaseSize="128,128" />
