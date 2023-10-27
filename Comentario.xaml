@@ -26,7 +26,7 @@
 
          <ImageButton
             x:Name="imgFoto"
-            Source="dotnet_bot.svg"
+            Source="fondo.jpg"
             HeightRequest="100" 
             WidthRequest="150"
             Clicked="agregar_foto"  
