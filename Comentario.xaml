@@ -9,7 +9,7 @@
         VerticalOptions="Center">  -->
 
     <Grid RowDefinitions="5,Auto, *"
-              ColumnDefinitions=".35*,.35*,.30*"
+              ColumnDefinitions=".15*,.35*,.30*"
               Padding="10"
               RowSpacing="10"
               ColumnSpacing="10">
@@ -18,19 +18,20 @@
                 Placeholder="Comentar"
                 Text="{Binding Text}"
                 Grid.Row="1"
-                Grid.Column="2"/>
+                Grid.Column="1"/>
 
         <Button Text="Agregar"        
                 Grid.Row="1" 
                 Grid.Column="3"/>  
 
-        <!--    <ImageButton
-            Source="dotnet_bot.svg" 
-            SemanticProperties.Hint="Counts the number of times you click" 
+         <Button
+            
+            SemanticProperties.Hint="Counts the number of times you click"  
             HeightRequest="100" 
+            WidthRequest="150"
             Clicked="agregar_foto"  
-            HorizontalOptions="Center" 
-            VerticalOptions="Center"/> -->
+            Grid.Row="1" 
+            Grid.Column="0"/> 
 
       <!--  <Image x:Name="imgFoto"/> -->
 
