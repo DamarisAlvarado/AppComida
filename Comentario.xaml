@@ -14,13 +14,16 @@
               RowSpacing="10"
               ColumnSpacing="10">
 
-
             <Entry 
-        Placeholder="Comentar"
-        Text="{Binding Text}"
-        Grid.Row="1"/>
-            
-         <!--    <ImageButton
+                Placeholder="Comentar"
+                Text="{Binding Text}"
+                Grid.Row="1"/>
+
+        <Button Text="Agregar"        
+                Grid.Row="1" 
+                Grid.Column="3"/>  
+
+        <!--    <ImageButton
             Source="dotnet_bot.svg" 
             SemanticProperties.Hint="Counts the number of times you click" 
             HeightRequest="100" 
