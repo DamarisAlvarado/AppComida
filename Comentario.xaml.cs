@@ -16,5 +16,5 @@ public partial class Comentario : ContentPage
    //         var memoriaStream = await foto.OpenReadAsync();
     //        imgFoto.Source = ImageSource.FromStream(()=> memoriaStream);
     //    }
-    }
+   // }
 }
