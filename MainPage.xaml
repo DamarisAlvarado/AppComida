@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:AppComida.ViewModels"
              x:DataType="viewmodels:LoginViewModel"
-             Title="¡Hola!"
+             Title="Menu Principal"
+             BackgroundColor="{StaticResource Quinto}"
              x:Class="AppComida.MainPage">
 
     <ScrollView>
@@ -12,28 +13,47 @@
             Padding="30,30"
             VerticalOptions="Center">
 
-            <Image
-                Source="icon.png"
-                HeightRequest="150"
-                HorizontalOptions="Center" />
+            <Grid ColumnDefinitions="Auto, Auto"
+                  ColumnSpacing="1"
+                  HorizontalOptions="Center">
+
+                <Image
+                    Grid.Column="0"
+                    Source="rick.png"
+                    HeightRequest="150"
+                    HorizontalOptions="Center" />
+
+                <Image
+                    Grid.Column="1"
+                    Source="morty.png"
+                    HeightRequest="150"
+                    HorizontalOptions="Center" />
+                
+            </Grid>
+            
+            
 
             <Entry Placeholder="Correo"
                    FontFamily="Verdana"
                    Text="{Binding Email}"
                    x:Name="email"
                    HorizontalOptions="Center"
+                   BackgroundColor="White"
                    WidthRequest="350"/>
 
             <Entry Placeholder="Contraseña"
                    FontFamily="Verdana"
                    Text="{Binding Password}"
                    x:Name="password" 
+                   BackgroundColor="White"
                    HorizontalOptions="Center"
                    IsPassword="True"
                    WidthRequest="350"/>
 
-            <Label Text="¡Bienvenido!"
+            <Label Text="¡Hola compañero!, ¿o debería decir nuevo compañero?"
                    FontFamily="Verdana"
+                   FontSize="16"
+                   TextColor="{StaticResource Primero}"
                    HorizontalOptions="Center"/>
             <Button
                 FontFamily="Verdana"
@@ -46,6 +66,8 @@
 
             <Label Text="¿Quieres iniciar en modo incognito?"
                    FontFamily="Verdana"
+                   FontSize="16"
+                   TextColor="{StaticResource Primero}"
                    HorizontalOptions="Center"/>
             <Button
                 FontFamily="Verdana"
