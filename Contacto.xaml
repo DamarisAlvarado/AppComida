@@ -19,16 +19,17 @@
                 Text="Información de contacto de los desarrolladores"
                 FontSize="18"
                 Margin="25, 5"
-                TextColor="{StaticResource Primero}"/>
+                TextColor="{StaticResource White}"/>
 
             <!--#region AMEL: Información de DAMARIS--> 
             <Frame
                 CornerRadius="12"
                 HasShadow="True"
+               
                 Margin="50, 0">
                 <StackLayout>
                     <!-- Nombre -->
-                    <Label 
+                    <Label                       
                         Text="{Binding Damaris.nombre}"
                         FontAttributes="Bold"
                         TextColor="{StaticResource Tercero}"
@@ -41,7 +42,7 @@
                         HorizontalOptions="Fill" />
                         
                     <!-- Numero de control -->
-                    <Label
+                    <Label    
                         Text="{Binding Damaris.matricula, StringFormat='Matricula: {0}'}"
                         TextColor="{StaticResource Quinto}"
                         HorizontalOptions="Fill" />
@@ -70,8 +71,8 @@
                             Text="Contactar"
                             HorizontalOptions="End"
                             Margin="0, 2"
-                            BackgroundColor="{StaticResource Sexto}"
-                            TextColor="{StaticResource Quinto}"
+                            BackgroundColor="{StaticResource Tercero}"
+                            TextColor="{StaticResource White}"
                             Command="{Binding OpenEmail}"
                             CommandParameter="{Binding Damaris}"/>
                     </Grid>
@@ -131,8 +132,8 @@
                             Text="Contactar"
                             HorizontalOptions="End"
                             Margin="0, 2"
-                            BackgroundColor="{StaticResource Sexto}"
-                            TextColor="{StaticResource Quinto}"
+                            BackgroundColor="{StaticResource Tercero}"
+                            TextColor="{StaticResource White}"
                             Command="{Binding OpenEmail}"
                             CommandParameter="{Binding Samantha}"/>
                     </Grid>
@@ -189,8 +190,8 @@
                             Text="Contactar"
                             HorizontalOptions="End"
                             Margin="0, 2"
-                            BackgroundColor="{StaticResource Sexto}"
-                            TextColor="{StaticResource Quinto}"
+                            BackgroundColor="{StaticResource Tercero}"
+                            TextColor="{StaticResource White}"
                             Command="{Binding OpenEmail}"
                             CommandParameter="{Binding Amel}"/>
                     </Grid>

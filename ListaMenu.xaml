@@ -19,13 +19,13 @@
                             x:Name="listViewPersonajes">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame>
+                        <Frame Margin="10" >
                             <Grid ColumnDefinitions="Auto, *" ColumnSpacing="5">
                                 <Image Source="{Binding image}" WidthRequest="100" Grid.Column="0"/>
                                 <StackLayout  Orientation="Vertical" Padding="5" Grid.Column="1" >
-                                    <Label Text="{Binding name , StringFormat='Nombre: {0}'}"/>
-                                    <Label Text="{Binding status , StringFormat='Estatus: {0}'}"/>
-                                    <Label Text="{Binding species , StringFormat='Especie: {0}'}"/>
+                                    <Label TextColor="{StaticResource Tercero}" Margin="5" FontAttributes="Bold" Text="{Binding name , StringFormat='Nombre: {0}'}"/>
+                                    <Label TextColor="{StaticResource Septimo}" Margin="5" FontAttributes="Bold" Text="{Binding status , StringFormat='Estatus: {0}'}"/>
+                                    <Label TextColor="{StaticResource Quinto}" Margin="5" FontAttributes="Bold" Text="{Binding species , StringFormat='Especie: {0}'}"/>
                                 </StackLayout>
                             </Grid>
                         </Frame>
