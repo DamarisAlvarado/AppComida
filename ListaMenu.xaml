@@ -8,29 +8,31 @@
     <ScrollView>
         <VerticalStackLayout
          Spacing="25"
-         Padding="50,30"
-         >
+         Padding="50,30">
 
-            <ActivityIndicator x:Name="loading" HeightRequest="30" Color="{StaticResource Onceavo}" IsRunning="True" 
-                            IsVisible="false"/>
+            <ActivityIndicator x:Name="loading" HeightRequest="30" Color="{StaticResource Onceavo}" IsRunning="True" IsVisible="false"/>
 
             <Label Text="Datos de Personajes" FontSize="Medium" FontAttributes="Bold" TextColor="{StaticResource Quinto}"/>
 
-            <ListView x:Name="listViewPersonajes"  >
-            <ListView.ItemTemplate >
-                <DataTemplate >
-                  <ViewCell >
-                     <StackLayout  Orientation="Horizontal" Padding="20"  >
-                        <Image Source="{Binding image}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
-                                <Label Text="{Binding name , StringFormat='Nombre: {0}'}"  VerticalTextAlignment="Center"  Margin="30"  />
-                                <Label Text="{Binding status , StringFormat='Estatus: {0}'}" VerticalTextAlignment="Center"  Margin="30"  />
-                                <Label Text="{Binding species , StringFormat='Especie: {0}'}" VerticalTextAlignment="Center"  Margin="30"  />
-                            </StackLayout>
-                           
-                        </ViewCell>
+            <CollectionView ItemsSource="{Binding Comentario}" 
+                            SelectionMode="None"
+                            x:Name="listViewPersonajes">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame>
+                            <Grid ColumnDefinitions="Auto, *" ColumnSpacing="5">
+                                <Image Source="{Binding image}" WidthRequest="100" Grid.Column="0"/>
+                                <StackLayout  Orientation="Vertical" Padding="5" Grid.Column="1" >
+                                    <Label Text="{Binding name , StringFormat='Nombre: {0}'}"/>
+                                    <Label Text="{Binding status , StringFormat='Estatus: {0}'}"/>
+                                    <Label Text="{Binding species , StringFormat='Especie: {0}'}"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
 
             <Button
                 x:Name="CounterBtn"
@@ -41,8 +43,7 @@
                 FontAttributes="Bold"
                 FontSize="Medium"
                 HorizontalOptions="Center" />
-
-
+            
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
